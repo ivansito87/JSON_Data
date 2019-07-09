@@ -11,6 +11,33 @@
         var numberContent = 5;
         var arrayContent = ["asparagus", "lettuce", "kale"];
         var dateContent = new Date();
+
+        function testData(data){
+
+            //NOTE this code is only for modern browsers but the best way to do this is with an 
+            for(prop in data) {
+                if(hasOwnProperty === true ) 
+                {
+                    console.log("Not an empty object");
+                    return data;
+                }
+            }
+            if(JSON.stringify(data) === JSON.stringify({})){
+                console.log("Empty object: ")
+                return data;
+            } else {
+                console.log("Not an empty object");
+            }
+            // or we can use the code below for new browsers
+            /*
+            if(Object.keys(data).length === 0 && data.constructor === Object){
+                console.log("Empty object: ")
+                return data;
+            } 
+            console.log("Not an empty object: ")
+            return data;
+            */
+        }
     </script>
     </body>
 </html>
